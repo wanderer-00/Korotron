@@ -1,0 +1,40 @@
+/* кластер с карточками */
+#cluster {
+    /* flex позиционирование элементов внутри */
+    display: flex;
+    /* перенос элементов на другую строчку */
+    flex-wrap: wrap;
+    /* расстояние между элементами */
+    grid-gap: 20px;
+    /* карточки по центру */
+    justify-content: center;
+    
+    /* удалить это */
+/*    background-color: antiquewhite;*/
+}
+
+/* карточка товара */
+.card {
+    /* размер по содержимому */
+    display: inline-block;
+    /* текст по центру */
+    text-align: center;
+    
+    /* технические стили */
+    border: 1px solid red;
+}
+
+/* картинка товара в карточке */
+.card .icon {
+    /* ширина */
+    width: 160px;
+    /* высота */
+    height: 160px;
+    /* размер фонового изображения */
+    background-size: 32px;
+    /* отключить размытие мелких изображений */
+    image-rendering: pixelated;
+    
+    /* удалить это */
+    border: 1px solid red;
+}
