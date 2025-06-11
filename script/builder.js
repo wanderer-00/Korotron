@@ -1,2 +1,4 @@
 // кластер карточек
-let cluster = 1;
+let cluster = document.GetElementById("cluster");
+
+cluster.innerHTML = "бля";
