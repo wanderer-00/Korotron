@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Контейнер всей страницы */
+        .container {
+            display: flex;
+        }
+
+        /* ЛЕВАЯ СТОРОНА - МЕНЮ */
+        .menu {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin-bottom: 5px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* ПРАВАЯ СТОРОНА - ОСНОВНОЙ КОНТЕНТ */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ЛЕВЫЙ БЛОК (МЕНЮ) -->
+    <div class="menu">
+        <ul>
+            <li><a href="s1.html">Главная страница</a></li>
+            <li><a href="s2.html">Одежда</a></li>
+            <li><a href="s3.html">Посуда</a></li>
+            <li><a href="s4.html">Ручки</a></li>
+            <li><a href="s5.html">Электроника</a></li>
+            <li><a href="s6.html">Зонты</a></li>
+            <li><a href="s7.html">Сумки</a></li>
+            <li><a href="s8.html">Ежедневники и блокноты</a></li>
+            <li><a href="s9.html">Упаковка</a></li>
+            <li><a href="s10.html">Элементы кастомизации</a></li>
+            <li><a href="s11.html">Подарочные наборы</a></li>
+            <li><a href="s12.html">Новогодние подарки</a></li>
+            <li><a href="s13.html">Дом</a></li>
+            <li><a href="s14.html">Отдых</a></li>
+            <li><a href="s15.html">Вкусные подарки</a></li>
+            <li><a href="s16.html">Спортивные товары</a></li>
+            <li><a href="s17.html">Корпоративные подарки</a></li>
+            <li><a href="s18.html">Производство на заказ</a></li>
+            <li><a href="s19.html">Праздники</a></li>
+            <li><a href="s20.html">Маркетинговая поддержка</a></li>
+        </ul>
+    </div>
+
+
+    <!-- ПРАВЫЙ БЛОК (ОСНОВНАЯ ИНФОРМАЦИЯ) -->
+    <div class="content">
+    <!--<h2>.</h2 -->
+        <div class="header">
+    <div class="logo-container">
+        <!-- Место под логотип -->
+        <img src="/path/to/logo.png" alt="Логотип компании"/>
+    </div>
+    <h1>Название Компании</h1>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .filters {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .price-range {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .price-input {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .reset-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+
+        .reset-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 10px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .product-image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-category {
+            display: inline-block;
+            background-color: #e0e0e0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .product-detail {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #e53935;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #666;
+            grid-column: 1 / -1;
+        }
+
+        .error {
+            text-align: center;
+            padding: 20px;
+            color: #e53935;
+            font-weight: bold;
+            grid-column: 1 / -1;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #666;
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 600px) {
+            .products-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .filters {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Каталог товаров</h1>
+    </div>
+
+    <div class="filters">
+        <div class="filter-group">
+            <h3>Категория</h3>
+            <select id="category-filter" class="filter-select" multiple>
+                <option value="">Все категории</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <h3>Материал</h3>
+            <select id="material-filter" class="filter-select" multiple>
+                <option value="">Все материалы</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <h3>Цена</h3>
+            <div class="price-range">
+                <input type="number" id="min-price" class="price-input" placeholder="От">
+                <span>-</span>
+                <input type="number" id="max-price" class="price-input" placeholder="До">
+            </div>
+        </div>
+        
+        <button id="reset-filters" class="reset-btn">Сбросить фильтры</button>
+    </div>
+
+    <div id="products-container" class="products-container">
+        <div class="loading">Загрузка товаров...</div>
+    </div>
+
+    <script>
+        // Глобальные переменные для хранения данных
+        let allProducts = [];
+        let filteredProducts = [];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('products-container');
+            const categoryFilter = document.getElementById('category-filter');
+            const materialFilter = document.getElementById('material-filter');
+            const minPriceInput = document.getElementById('min-price');
+            const maxPriceInput = document.getElementById('max-price');
+            const resetBtn = document.getElementById('reset-filters');
+            
+            // URL для экспорта в CSV
+            
+            fetch(sheetUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error('Ошибка сети');
+                    return response.text();
+                })
+                .then(csvData => {
+                    allProducts = parseCSV(csvData);
+                    if (allProducts.length > 0) {
+                        initializeFilters(allProducts);
+                        filterProducts();
+                    } else {
+                        showError("Нет данных о товарах");
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка загрузки:', error);
+                    showError("Ошибка загрузки данных. Пожалуйста, попробуйте позже.");
+                });
+
+            function parseCSV(csv) {
+                const lines = csv.split(/\r?\n/);
+                if (lines.length < 2) return [];
+                
+                const headers = lines[0].split(',').map(h => h.trim());
+                const result = [];
+                
+                for (let i = 1; i < lines.length; i++) {
+                    if (!lines[i].trim()) continue;
+                    
+                    const values = lines[i].split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
+                                       .map(v => v.trim().replace(/^"|"$/g, ''));
+                    
+                    if (values.length === headers.length) {
+                        const product = {};
+                        headers.forEach((header, j) => {
+                            product[header] = values[j] || '';
+                            
+                            // Преобразуем цену в число (удаляем всё, кроме цифр)
+                            if (header === 'Цена') {
+                                const num = parseFloat(values[j].replace(/[^\d.,]/g, '').replace(',', '.'));
+                                product.priceNum = isNaN(num) ? 0 : num;
+                            }
+                        });
+                        result.push(product);
+                    }
+                }
+                return result;
+            }
+
+            function initializeFilters(products) {
+                // Получаем уникальные категории
+                const categories = [...new Set(products.map(p => p['Категория']).filter(Boolean))];
+                categories.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = category;
+                    categoryFilter.appendChild(option);
+                });
+                
+                // Получаем уникальные материалы
+                const materials = [...new Set(products.map(p => p['Материал']).filter(Boolean))];
+                materials.forEach(material => {
+                    const option = document.createElement('option');
+                    option.value = material;
+                    option.textContent = material;
+                    materialFilter.appendChild(option);
+                });
+            }
+
+            function filterProducts() {
+                // Получаем выбранные категории
+                const selectedCategories = Array.from(categoryFilter.selectedOptions)
+                    .map(opt => opt.value)
+                    .filter(Boolean);
+                
+                // Получаем выбранные материалы
+                const selectedMaterials = Array.from(materialFilter.selectedOptions)
+                    .map(opt => opt.value)
+                    .filter(Boolean);
+                
+                // Получаем диапазон цен
+                const minPrice = parseFloat(minPriceInput.value) || 0;
+                const maxPrice = parseFloat(maxPriceInput.value) || Infinity;
+                
+                // Фильтруем товары
+                filteredProducts = allProducts.filter(product => {
+                    // Фильтр по категории
+                    if (selectedCategories.length > 0 && !selectedCategories.includes(product['Категория'])) {
+                        return false;
+                    }
+                    
+                    // Фильтр по материалу
+                    if (selectedMaterials.length > 0 && !selectedMaterials.includes(product['Материал'])) {
+                        return false;
+                    }
+                    
+                    // Фильтр по цене
+                    if (product.priceNum < minPrice || product.priceNum > maxPrice) {
+                        return false;
+                    }
+                    
+                    return true;
+                });
+                
+                displayProducts(filteredProducts);
+            }
+
+            function displayProducts(products) {
+                container.innerHTML = '';
+                
+                if (products.length === 0) {
+                    container.innerHTML = '<div class="no-results">Товары не найдены. Попробуйте изменить параметры фильтрации.</div>';
+                    return;
+                }
+                
+                products.forEach(product => {
+                    if (product['Ссылка на фото'] && product['Название']) {
+                        const card = document.createElement('div');
+                        card.className = 'product-card';
+                        
+                        card.innerHTML = `
+                            <div class="product-image-container">
+                                <img src="${product['Ссылка на фото']}" 
+                                     alt="${product['Название']}" 
+                                     class="product-image"
+                                     onerror="this.src='https://via.placeholder.com/300x200?text=Нет+фото'">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">${product['Название']}</h3>
+                                ${product['Категория'] ? `<span class="product-category">${product['Категория']}</span>` : ''}
+                                ${product['Артикул'] ? `<p class="product-detail">Артикул: ${product['Артикул']}</p>` : ''}
+                                ${product['Материал'] ? `<p class="product-detail">Материал: ${product['Материал']}</p>` : ''}
+                                ${product['Вес брутто (1 шт.)'] ? `<p class="product-detail">Вес: ${product['Вес брутто (1 шт.)']}</p>` : ''}
+                                ${product['Транспортная упаковка'] ? `<p class="product-detail">Упаковка: ${product['Транспортная упаковка']}</p>` : ''}
+                                ${product['Цена'] ? `<p class="product-price">Цена: ${product['Цена']}</p>` : '<p class="product-price">Цена по запросу</p>'}
+                                ${product['Ссылка на товар'] ? `<a href="${product['Ссылка на товар']}" target="_blank" style="display: block; margin-top: 10px; color: #2196F3; text-decoration: none;">Подробнее →</a>` : ''}
+                            </div>
+                        `;
+                        
+                        container.appendChild(card);
+                    }
+                });
+            }
+
+            function showError(message) {
+                container.innerHTML = `<div class="error">${message}</div>`;
+            }
+            
+            // События для фильтров
+            categoryFilter.addEventListener('change', filterProducts);
+            materialFilter.addEventListener('change', filterProducts);
+            minPriceInput.addEventListener('input', filterProducts);
+            maxPriceInput.addEventListener('input', filterProducts);
+            
+            // Сброс фильтров
+            resetBtn.addEventListener('click', function() {
+                categoryFilter.selectedIndex = 0;
+                materialFilter.selectedIndex = 0;
+                minPriceInput.value = '';
+                maxPriceInput.value = '';
+                filterProducts();
+            });
+        });
+    </script>
+</body>
+</html>
