@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Korotron</title>
-    
+
     <link rel="stylesheet" href="global.css">
     <style>
         .product-card {
@@ -19,7 +19,6 @@
             text-align: center;
             padding: 20px;
         }
-
     </style>
 </head>
 
@@ -27,8 +26,12 @@
     <div class="container">
 
         <div class="content">
-            <div id="menu"></div>
-            
+            <!-- категории -->
+            <nav id="menu"></nav>
+
+            <!-- поиск по сайту -->
+            <input type="search">
+
             <div class="filters">
                 <div class="filter-group">
                     <h3>Материал</h3>
@@ -220,13 +223,10 @@ ${product['Ссылка на товар']?`<a href="${product['Ссылка на
                 filterProducts();
             });
         });
-
     </script>
 </body>
 
 <!-- данные категорий -->
 <script src="data/link.js"></script>
 <!-- постройка категорий -->
-<script src="script/link.js"></script>
-
-</html>
+<script src="script/link.js"></script></html>

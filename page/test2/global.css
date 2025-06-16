@@ -4,6 +4,15 @@
      padding: 0;
  }
 
+.m-ctlg-icon {
+    --color-print: hsl(77, 73%, 79%);
+    --color-print-second: hsl(77, 56%, 65%);
+    color: black;
+    overflow: visible;
+    height: 60px;
+    
+}
+
  body {
      width: 100%;
      font-family: Arial, sans-serif;
@@ -11,31 +20,26 @@
 
  /* Контейнер всей страницы */
  .container {
-     width: 100wv;
      display: flex;
      min-height: 100vh;
  }
 
  /* ЛЕВАЯ СТОРОНА - МЕНЮ */
  #menu {
+     background-color: aquamarine;
      display: flex;
-     overflow: hidden;
+     flex-wrap: wrap;
      width: 100%;
      gap: 8px;
      margin-bottom: 1rem;
  }
 
- #menu a {
+ #menu svg {
      display: inline-block;
+     cursor: pointer;
      padding: 6px 8px;
-     text-decoration: none;
      border-radius: 5px;
      background-color: bisque;
-     white-space: nowrap;
- }
-
- .menu a:hover {
-     background-color: #e0e0e0;
  }
 
  /* ПРАВАЯ СТОРОНА - ОСНОВНОЙ КОНТЕНТ */
