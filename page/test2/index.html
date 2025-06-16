@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Korotron</title>
+    
     <link rel="stylesheet" href="global.css">
     <style>
-        .category-hea0der {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
         .product-card {
             margin-bottom: 20px;
             border: 1px solid #ddd;
@@ -35,14 +26,9 @@
 <body>
     <div class="container">
 
-        <div class="menu">
-            <ul id="menu_list"></ul>
-        </div>
-
         <div class="content">
-            <div class="category-header">
-                <h2>Посуда</h2>
-            </div>
+            <div id="menu"></div>
+            
             <div class="filters">
                 <div class="filter-group">
                     <h3>Материал</h3>
@@ -238,6 +224,9 @@ ${product['Ссылка на товар']?`<a href="${product['Ссылка на
     </script>
 </body>
 
+<!-- данные категорий -->
+<script src="data/link.js"></script>
+<!-- постройка категорий -->
 <script src="script/link.js"></script>
 
 </html>
