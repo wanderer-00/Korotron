@@ -1,4 +1,5 @@
 var dataProgect111 = [
+    // gifts111
     {
         "ICON": "&#129326;",
         "NAME": "название №1",
@@ -27,11 +28,12 @@ var dataProgect111 = [
         "COLOR": "название цвета",
         "ARTICLE": "ПР0101",
     },
+    // oasis
     {
         "ICON": "&#129326;",
         "NAME": "название №1",
         "PRICE": "название №1",
-        "COLOR": "название цвета",
+        "COLOR": "",
         "ARTICLE": "ПР0101",
     },
 
