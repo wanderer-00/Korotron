@@ -4,17 +4,6 @@
      padding: 0;
  }
 
-.m-ctlg-icon {
-    --icon-size: 60px;
-    --color-print: hsl(77, 73%, 79%);
-    --color-print-second: hsl(77, 56%, 65%);
-    color: black;
-    overflow: visible;
-    height: var(--icon-size);
-    /* соотношение сторон */
-    aspect-ratio: 7/6;
-}
-
  body {
      width: 100%;
      font-family: Arial, sans-serif;
@@ -28,20 +17,11 @@
 
  /* ЛЕВАЯ СТОРОНА - МЕНЮ */
  #menu {
-     background-color: aquamarine;
+/*     background-color: aquamarine;*/
      display: flex;
      flex-wrap: wrap;
-     width: 100%;
      gap: 8px;
      margin-bottom: 1rem;
- }
-
- #menu svg {
-     display: inline-block;
-     cursor: pointer;
-     padding: 6px 8px;
-     border-radius: 5px;
-     background-color: bisque;
  }
 
  /* ПРАВАЯ СТОРОНА - ОСНОВНОЙ КОНТЕНТ */

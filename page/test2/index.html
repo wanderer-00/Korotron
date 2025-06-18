@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Korotron</title>
-
-    <link rel="stylesheet" href="global.css">
+    <!-- общие стили сайта -->
+    <link rel="stylesheet" href="style/global.css">
+    <!-- radio (категории) -->
+    <link rel="stylesheet" href="style/radio.css">
+    <!-- стили, применимые только к элементам на этой странице -->
     <style>
         .product-card {
             margin-bottom: 20px;
@@ -19,6 +23,7 @@
             text-align: center;
             padding: 20px;
         }
+
     </style>
 </head>
 
@@ -27,7 +32,7 @@
 
         <div class="content">
             <!-- категории -->
-            <div id="menu"></div>
+            <div id="menu" class="checkbox_radio"></div>
 
             <!-- поиск по сайту -->
             <input type="search">
@@ -223,10 +228,13 @@ ${product['Ссылка на товар']?`<a href="${product['Ссылка на
                 filterProducts();
             });
         });
+
     </script>
 </body>
 
 <!-- данные категорий -->
 <script src="data/link.js"></script>
 <!-- постройка категорий -->
-<script src="script/link.js"></script></html>
+<script src="script/link.js"></script>
+
+</html>
