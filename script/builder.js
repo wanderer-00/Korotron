@@ -133,7 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.className = 'product-card';
                 card.innerHTML = `
 <div class="product-image-container">
-<img loading="lazy" src="${product['Ссылка на фото']}" alt="${product['Название']}" class="product-image" onerror="this.src='https://via.placeholder.com/300x200?text=Нет+фото'">
+<div style="background-image: url()"
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/330px-Rotating_earth_%28large%29.gif" alt="${product['Название']}" class="product-image" onerror="this.src='https://via.placeholder.com/300x200?text=Нет+фото'">
 </div>
 <div class="product-info">
 <h3 class="product-title">${product['Название']}</h3>

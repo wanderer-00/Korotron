@@ -126,7 +126,8 @@
  }
 
  .product-image-container {
-     height: 200px;
+     width: 100%;
+     aspect-ratio: 1;
      overflow: hidden;
  }
 

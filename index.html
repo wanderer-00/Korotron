@@ -31,7 +31,17 @@
 
         <div class="content">
             <!-- категории -->
-            <div id="menu" class="checkbox_radio"></div>
+            <div id="menu" class="checkbox_radio">
+                <!-- первая категория "все товары" -->
+                <div title="${links[i].NAME}">
+                    <input type="radio" id="A0" name="A" checked>
+                    <label for="A0">
+                        <svg class="m-ctlg-icon">
+                            <use xlink:href="img/icons-catalog.svg?v=004#all"></use>
+                        </svg>
+                    </label>
+                </div>
+            </div>
 
             <div class="filters">
                 <div class="filter-group">
