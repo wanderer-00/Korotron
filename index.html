@@ -1,24 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
-    <!-- стили, применимые ко всему сайту -->
-    <link rel="stylesheet" href="css/global.css">
-    <!-- стили, применимые к этой странице -->
-    <link rel="stylesheet" href="css/local.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Korotron</title>
+    <!-- общие стили сайта -->
+    <link rel="stylesheet" href="style/global.css">
+    <!-- radio (категории) -->
+    <link rel="stylesheet" href="style/radio.css">
+    <!-- стили, применимые только к элементам на этой странице -->
+    <style>
+        .product-card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- кластер карточек с товарами -->
-    <div id="cluster"></div>
+    <div class="container">
 
+        <div class="content">
+            <!-- категории -->
+            <div id="menu" class="checkbox_radio"></div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Материал</h3>
+                    <select id="material-filter" class="filter-select">
+                        <option value="">Все материалы</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Цена</h3>
+                    <div class="price-filter">
+                        <input type="number" id="min-price" class="price-input" placeholder="От">
+                        <span>-</span>
+                        <input type="number" id="max-price" class="price-input" placeholder="До">
+                    </div>
+                </div>
+                <button id="reset-filters" class="reset-btn">Сбросить фильтры</button>
+            </div>
+
+            <div id="products-container" class="products-container"></div>
+            <div id="loading-spinner" class="loading-spinner">Загрузка...</div>
+        </div>
+    </div>
 </body>
 
-<!-- база данных gifts.ru -->
-<script src="data/progect111.js"></script>
-<!-- скрипт создания карточек товаров -->
+<!-- данные категорий -->
+<script src="data/link.js"></script>
+<!-- постройка категорий -->
+<script src="script/link.js"></script>
+<!-- постройка карточек товаров -->
 <script src="script/builder.js"></script>
 
 </html>
