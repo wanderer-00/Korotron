@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.className = 'product-card';
                 card.innerHTML = `
 <div class="product-image-container">
-<img loading="lazy" src="https://files.gifts.ru/reviewer/webp/40/11877.20_1_500.webp" alt="${product['Название']}" class="product-image" onerror="this.src='https://via.placeholder.com/300x200?text=Нет+фото'">
+<img loading="lazy" src="https://files.gifts.ru/reviewer/webp/40/11877.20_1_200x200.webp" alt="${product['Название']}" class="product-image" onerror="this.src='https://via.placeholder.com/300x200?text=Нет+фото'">
 </div>
 <div class="product-info">
 <h3 class="product-title">${product['Название']}</h3>
