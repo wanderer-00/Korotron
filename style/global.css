@@ -15,15 +15,6 @@
      min-height: 100vh;
  }
 
- /* ЛЕВАЯ СТОРОНА - МЕНЮ */
- #menu {
-/*     background-color: aquamarine;*/
-     display: flex;
-     flex-wrap: wrap;
-     gap: 8px;
-     margin-bottom: 1rem;
- }
-
  /* ПРАВАЯ СТОРОНА - ОСНОВНОЙ КОНТЕНТ */
  .content {
      flex-grow: 1;
