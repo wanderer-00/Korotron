@@ -1,24 +1,34 @@
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
+}
+
+body {
+    padding: 2rem;
     width: 100%;
     font-family: Arial, sans-serif;
 }
 
 .wrapper {
     width: 100%;
-    margin: auto;
+}
+
+h2 {
+    text-align: center;
 }
 
 .table {
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid #dddddd;
-    border-collapse: collapse;
+    border-collapse: collapse;    /* привычные border (не двойные) */
 }
 
 .table th {
@@ -33,12 +43,11 @@ body {
     padding: 5px;
 }
 
-.nowrap {
-    white-space: nowrap
+caption {
+    margin: 1rem 0;
+    text-align: left;
 }
 
-@media screen (orientation: portrait) {
-    .wrapper {
-        width: 100%;
-    }
+.nowrap {
+    white-space: nowrap
 }

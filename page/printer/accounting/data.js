@@ -21,11 +21,5 @@ var tableData = [
             100,
             100000.99
         ],
-        [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, minima, fugiat. Odio et atque fugit reiciendis odit placeat accusamus voluptates voluptas ullam, tempore aut eligendi deleniti itaque nobis culpa quis.",
-            "XXXXXXXX",
-            100,
-            100000.99
-        ]
     ]
 ];
