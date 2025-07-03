@@ -3,15 +3,15 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     font-family: Arial, sans-serif;
 }
 
 .wrapper {
-    width: 80%;
-    aspect-ratio: 210/297;
+    width: 100%;
     margin: auto;
-    /*    border: 1px solid red;*/
 }
 
 .table {
