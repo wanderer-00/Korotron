@@ -14,16 +14,52 @@
 <body>
     <div class="wrapper" id="wrapper">
         <h2>Заявка на документы для бухгалтерии</h2>
-        <!-- перенести table сюда -->
-        <!-- для добавления текста после таблицы -->
+        <table class="table" id="table1">
+            <caption>OOO Ремарк</caption>
+            <thead>
+                <tr>
+                    <th>№ заказа</th>
+                    <th>Клиент</th>
+                    <th>Плательщик</th>
+                    <th>Дата отгрузки</th>
+                </tr>
+            </thead>
+        </table>
+        <!-- ковертер даты -->
+        <script src="../dateConverter.js"></script>
+        
+        <table class="table" id="table2">
+            <caption>ЭДО</caption>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Наименование</th>
+                    <th>Артикул</th>
+                    <th>Тираж</th>
+                    <th>Стоимость, руб.</th>
+                </tr>
+            </thead>
+        </table>
+
+        <!-- БД -->
+        <script src="data.js"></script>
+        <!-- построение таблицы из данных БД -->
+        <script src="table_builder.js"></script>
+
+        <table id="table4">
+            <thead>
+                <tr>
+                    <th>Агент</th>
+                    <th>АФ планирования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Печать, электронная подпись или Ф.И.О.</td>
+                    <td>Печать, электронная подпись или Ф.И.О.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
-
-<!-- ковертер даты -->
-<script src="../dateConverter.js"></script>
-<!-- БД -->
-<script src="data.js"></script>
-<!-- построение таблицы из данных БД -->
-<script src="table_builder.js"></script>
-
 </html>

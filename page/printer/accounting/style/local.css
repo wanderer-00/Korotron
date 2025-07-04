@@ -4,3 +4,11 @@
 .nowrap {
     white-space: nowrap
 }
+
+#table4 {
+    width: 100%;
+
+    & thead {
+        text-align: left;
+    }
+}

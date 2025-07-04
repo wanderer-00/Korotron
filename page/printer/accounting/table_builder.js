@@ -3,18 +3,8 @@ let wrapper = document.getElementById("wrapper");
 
 
 // создание 1-ой таблицы
-let table1 = document.createElement("table");
-table1.classList.add("table");
-table1.innerHTML = `
-    <caption>OOO Ремарк</caption>
-    <thead>
-        <tr>
-            <th>№ заказа</th>
-            <th>Клиент</th>
-            <th>Плательщик</th>
-            <th>Дата отгрузки</th>
-        </tr>
-    </thead>
+let table1 = document.getElementById('table1');
+table1.innerHTML += `
     <tbody>
         <tr>
             <td align="center">${tableData[0][0]}</td>
@@ -23,26 +13,11 @@ table1.innerHTML = `
             <td align="center">${dateConverter(tableData[0][3])}</td>
         </tr>
     </tbody>`;
-wrapper.appendChild(table1);
 
 
 
 // создание 2-ой таблицы
-let table2 = document.createElement("table");
-table2.classList.add("table");
-
-table2.innerHTML = `
-    <caption>ЭДО</caption>
-    <thead>
-        <tr>
-            <th>№</th>
-            <th>Наименование</th>
-            <th>Артикул</th>
-            <th>Тираж</th>
-            <th>Стоимость, руб.</th>
-        </tr>
-    </thead>`;
-
+let table2 = document.getElementById('table2');
 let tbody = document.createElement("tbody");
 for (i = 0; i < tableData[1].length; i++) {
     tbody.innerHTML += `
