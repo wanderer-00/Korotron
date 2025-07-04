@@ -1,75 +1,54 @@
-let wrapper = document.getElementById("wrapper");
+let table1 = document.getElementById("table1");
+let table2 = document.getElementById("table2");
+let table3 = document.getElementById("table3");
 
 
 
 // создание 1-ой таблицы
-let table1 = document.createElement("table");
-table1.classList.add("table");
-table1.innerHTML = `
-    <caption>OOO Ремарк</caption>
-    <thead>
+let table1_tbody = document.createElement("tbody");
+table1_tbody.innerHTML = `
         <tr>
-            <th>№ заказа</th>
-            <th>Клиент</th>
-            <th>Плательщик</th>
-            <th>Дата отгрузки</th>
+            <td>Иванов Иван Иванович</td>
+            <td>г. XXXXXXX-XXXXXX, п-т XXXXXXX, д. XXX</td>
+            <td>8(XXX)-XXX-XX-XX</td>
+            <td>Дата доставки клиенту</td>
+            <td rowspan="2">Тип доставки кол-во дней</td>
         </tr>
-    </thead>
-    <tbody>
         <tr>
-            <td align="center">${tableData[0][0]}</td>
-            <td>${tableData[0][1]}</td>
-            <td>${tableData[0][2]}</td>
-            <td align="center">${dateConverter(tableData[0][3])}</td>
+            <td>Кол-во мест, шт.</td>
+            <td></td>
+            <td>Объём, м<sup>3</sup>.</td>
+            <td></td>
         </tr>
-    </tbody>`;
-wrapper.appendChild(table1);
+`;
+table1.appendChild(table1_tbody);
 
 
 
 // создание 2-ой таблицы
-let table2 = document.createElement("table");
-table2.classList.add("table");
-
-table2.innerHTML = `
-    <caption>ЭДО</caption>
-    <thead>
+let table2_tbody = document.createElement("tbody");
+table2_tbody.innerHTML = `
         <tr>
-            <th>№</th>
-            <th>Наименование</th>
-            <th>Артикул</th>
-            <th>Тираж</th>
-            <th>Стоимость, руб.</th>
-        </tr>
-    </thead>`;
+            <td>XXXXXX</td>
+            <td>Название организации</td>
+            <td>Название организации</td>
+            <td>dd.mm.yyyy</td>
+            <td>dd.mm.yyyy</td>
+        </tr>`;
+table2.appendChild(table2_tbody);
 
-let tbody = document.createElement("tbody");
-for (i = 0; i < tableData[1].length; i++) {
-    tbody.innerHTML += `
-    <tr>
-        <td align="center">${i+1}</td><td>${tableData[1][i][0]}</td>
-        <td align="center">${tableData[1][i][1]}</td>
-        <td align="center">${tableData[1][i][2]}</td>
-        <td class="nowrap" align="right">${tableData[1][i][3]}</td>
-    </tr>`;
-};
-table2.appendChild(tbody);
 
-table2.innerHTML += `
-    <tfoot>
+
+// создание 3-ей таблицы
+let table3_tbody = document.createElement("tbody");
+table3_tbody.innerHTML = `
         <tr>
-            <td align="right" colspan="4"><b>Итог:</b></td>
-            <td align="right" class="nowrap"><b>${finalPrice(tableData[1].length)}</b></td>
-        </tr>
-    </tfoot>`;
-
-wrapper.appendChild(table2);
-
-
-
-// расчёт финальной суммы заказа
-function finalPrice(quantity) {
-    let sum = 0;
-    for (a = 0; a < quantity; a++) {sum += tableData[1][a][3]};
-    return sum.toFixed(2);
-};
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>`;
+table3.appendChild(table3_tbody);

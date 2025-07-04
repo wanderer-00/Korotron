@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Заявка на документы для бухгалтерии</title>
+    <!-- глобальные стили -->
+    <link rel="stylesheet" href="../global.css">
     <!-- локальные -->
     <link rel="stylesheet" href="style/local.css">
     <!-- оптимизация под печать страницы на бумаге -->
@@ -11,11 +13,51 @@
 
 <body>
     <div class="wrapper" id="wrapper">
+        <table class="table" id="table1">
+            <thead>
+                <tr>
+                    <th>Получатель(ФИО)</th>
+                    <th>Адрес</th>
+                    <th>Контакт</th>
+                    <th>Дата доставки клиенту</th>
+                    <th>Способ доставки</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <table class="table" id="table2">
+            <thead>
+                <tr>
+                    <th>№ Заказа</th>
+                    <th>Клиент</th>
+                    <th>Плательщик</th>
+                    <th>Желаемая дата отгрузки</th>
+                    <th>Дата отгрузки со склада Ремарк</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <table class="table" id="table3">
+            <captin>ЭДО</captin>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Наименование</th>
+                    <th>Артикул</th>
+                    <th>Тираж</th>
+                    <th>Стоимость, руб.</th>
+                    <th>№ Коробки</th>
+                    <th>Нанесение</th>
+                </tr>
+            </thead>
+        </table>
         <!-- перенести table сюда -->
         <!-- для добавления текста после таблицы -->
     </div>
 </body>
 
+
+<script src="../dateConverter.js"></script>
 <!-- БД -->
 <script src="data.js"></script>
 <!-- построение таблицы из данных БД -->

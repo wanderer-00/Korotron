@@ -1,0 +1,48 @@
+/* обнуление стилей */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2 {
+    text-align: center;
+}
+
+
+body {
+    padding: 2rem;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+/* стили таблиц */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    font-family: monospace;
+    border-collapse: collapse;    /* привычные border (не двойные) */
+}
+
+.table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+
+.table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+caption {
+    margin: 1rem 0;
+    text-align: left;
+}
