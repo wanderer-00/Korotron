@@ -28,7 +28,12 @@ h2 {
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid #dddddd;
-    border-collapse: collapse;    /* привычные border (не двойные) */
+    border-collapse: collapse;
+    /* привычные border (не двойные) */
+}
+
+.table tr {
+    page-break-inside: avoid
 }
 
 .table th {
@@ -50,4 +55,12 @@ caption {
 
 .nowrap {
     white-space: nowrap
+}
+
+#table4 {
+    width: 100%;
+
+    & thead {
+        text-align: left;
+    }
 }

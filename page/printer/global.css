@@ -16,6 +16,15 @@ h2 {
 }
 
 
+/* добавить начертания */
+@font-face {
+    font-family: 'UbuntuMono'; /* Имя, которое вы будете использовать в HTML */
+    src: url('font/UbuntuMono.ttf') format('ttf');
+    font-weight: normal; /* Начертание шрифта */
+    font-style: normal; /* Стиль шрифта */
+}
+
+
 body {
     padding: 2rem;
     width: 100%;
@@ -26,7 +35,7 @@ body {
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid #dddddd;
-    font-family: monospace;
+    font-family: 'UbuntuMono', monospace;
     border-collapse: collapse;    /* привычные border (не двойные) */
 }
 

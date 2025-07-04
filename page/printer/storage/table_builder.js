@@ -2,6 +2,12 @@ let table1 = document.getElementById("table1");
 let table2 = document.getElementById("table2");
 let table3 = document.getElementById("table3");
 
+let list_of_applications = [
+    'Гравировка',
+    'Шелкография',
+    'UV-печать',
+    'Вышивка',
+];
 
 
 // создание 1-ой таблицы
@@ -41,14 +47,16 @@ table2.appendChild(table2_tbody);
 
 // создание 3-ей таблицы
 let table3_tbody = document.createElement("tbody");
-table3_tbody.innerHTML = `
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-        </tr>`;
+for(i=0;i<tableData[2].length;i++){
+	table3_tbody.innerHTML += `
+	<tr>
+		<td>${i+1}</td>
+		<td>${tableData[2][i][0]}</td>
+		<td>${tableData[2][i][1]}</td>
+		<td>${tableData[2][i][2]}</td>
+		<td>${tableData[2][i][3]}</td>
+		<td>${tableData[2][i][4]}</td>
+		<td>${tableData[2][i][5]}</td>
+	</tr>`;
+}
 table3.appendChild(table3_tbody);
