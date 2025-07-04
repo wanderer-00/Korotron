@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2rem;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;    /* привычные border (не двойные) */
+}
+
+.table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+
+.table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+caption {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.nowrap {
+    white-space: nowrap
+}
