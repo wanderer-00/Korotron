@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'UbuntuMono'; /* Имя, которое вы будете использовать в HTML */
+    src: url('../../font/UbuntuMono-Regular.ttf') format('ttf');
+    font-weight: normal; /* Начертание шрифта */
+    font-style: normal; /* Стиль шрифта */
+}
+
+body {
+    font-family: 'UbuntuMono', monospace;
+}
+
+#price {background-color: aquamarine; text-align: right}

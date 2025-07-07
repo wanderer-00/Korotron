@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Дизайн таблиц</title>
+    <link rel="stylesheet" href="style/first.css">
+</head>
+<body>
+    <div class="wrapper">
+        <table id="firstTable" border="1" align="center" cellpadding="6">
+            <caption>DEMO</caption>
+                <col class="company" />
+                <col id="amount" />
+                <col id="yield" />
+                <col span="3" width="100" style="background: red" />
+                <col id="duration" />
+                <col id="spread" />
+                <col id="date" />
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Amount, USD</th>
+                    <th align="right">Yield, %</th>
+                    <th align="right">Price, %</th>
+                    <th align="right">Duration</th>
+                    <th align="right">Spread, BPS</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+
+<!-- БД -->
+<script src="data/first.js"></script>
+<!-- конвертация дат -->
+<script src="../dateConverter.js"></script>
+<!-- data insertion -->
+<script src="script/first.js"></script>
+
+</html>
