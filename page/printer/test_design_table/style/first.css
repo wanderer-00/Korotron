@@ -9,4 +9,25 @@ body {
     font-family: 'UbuntuMono', monospace;
 }
 
-#price {background-color: aquamarine; text-align: right}
+table {
+    border-spacing: 20px 0;
+    border-collapse: separate;
+/*    border-collapse: collapse;*/
+}
+
+table td {
+    color: #444;
+}
+
+table tr {
+    white-space: nowrap;
+}
+thead tr:nth-child(2) th,
+thead tr:nth-child(3) th{
+    border-bottom: 1px solid #DDD;
+}
+
+thead tr:nth-child(2) th {
+    text-align: left;
+    color: gray;
+}
