@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 290px;
+}
+
+.wrapper > div {
+    border: 1px solid red
+}
+
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    grid-gap: 10px;
+}
+
+#preview > div {
+    border: 1px solid black
+}

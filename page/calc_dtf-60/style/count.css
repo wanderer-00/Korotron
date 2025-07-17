@@ -1,0 +1,21 @@
+input.count::-webkit-outer-spin-button,
+input.count::-webkit-inner-spin-button {
+    /* удаление встроенных кнопок */
+    -webkit-appearance: none;
+}
+
+input.count {
+    width: 60px;
+    border: none;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+button.count {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-family: monospace;
+}

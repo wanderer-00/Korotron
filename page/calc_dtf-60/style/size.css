@@ -1,0 +1,18 @@
+/* Убрать кнопки увеличения и уменьшения в input number */
+/* Chrome, Safari, Edge, Opera */
+input.size::-webkit-outer-spin-button,
+input.size::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input.size {
+    -moz-appearance: textfield;
+}
+
+input.size {
+    width: 60px;
+    padding: 4px;
+    text-align: center;
+}

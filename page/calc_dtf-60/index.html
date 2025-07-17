@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Расчёт DTF-60</title>
+    <!-- size -->
+    <link rel="stylesheet" href="style/size.css">
+    <!-- count -->
+    <link rel="stylesheet" href="style/count.css">
+    <link rel="stylesheet" href="style/local.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="input">
+            <h3>Размер</h3>
+            <div class="element_size">
+                <input class="size" type="number" placeholder="ширина" id="width" value="100">
+                <span>×</span>
+                <input class="size" type="number" placeholder="высота" id="height" value="200">
+                <span>mm</span>
+            </div>
+            
+            <h3>Колличество</h3>
+            <button class="count" onclick="minus()">-</button>
+            <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1">
+            <button class="count" onclick="plus()">+</button>
+            
+            <h3></h3>
+            <button onclick="calc()">Расчитать</button>
+            
+            <pre id="result"></pre>
+        </div>
+        
+        <div>
+            <div id="preview"></div>
+        </div>
+    </div>
+</body>
+
+<!-- count -->
+<script src="script/count.js"></script>
+<!-- calc -->
+<script src="script/calc.js"></script>
+
+</html>
