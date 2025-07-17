@@ -1,21 +1,29 @@
 * {
     box-sizing: border-box;
+/*    border: 1px solid red*/
 }
 
-body {
-    font-family: monospace;
-}
+body {font-family: monospace}
 
 .wrapper {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr 580px;
+    grid-template-columns: minmax(210px, auto) 580px;
+    grid-template-rows: minmax(210px, auto) auto;
+}
+
+#input {
+    position: relative;
 }
 
 #input > div {
     position: fixed;
     display: grid;
     grid-gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid gray;
 }
 
 #preview {
