@@ -14,30 +14,53 @@
 <body>
     <div class="wrapper">
         <div id="input">
-            <h3>Размер</h3>
-            <div class="element_size">
-                <input class="size" type="number" placeholder="ширина" id="width" value="100">
-                <span>×</span>
-                <input class="size" type="number" placeholder="высота" id="height" value="200">
-                <span>mm</span>
+            <div>
+                <div class="element_size">
+                    <input class="size" type="number" placeholder="ширина" id="width" value="100">
+                    <span>×</span>
+                    <input class="size" type="number" placeholder="высота" id="height" value="200">
+                    <span>mm</span>
+                </div>
+
+                <div>
+                    <button class="count" onclick="minus()">-</button>
+                    <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1" oninput="validity.valid || (value='');">
+                    <button class="count" onclick="plus()">+</button>
+                </div>
+
+                <div id="result"></div>
             </div>
-            
-            <h3>Колличество</h3>
-            <button class="count" onclick="minus()">-</button>
-            <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1">
-            <button class="count" onclick="plus()">+</button>
-            
-            <h3></h3>
-            <button onclick="calc()">Расчитать</button>
-            
-            <pre id="result"></pre>
         </div>
-        
+
         <div>
             <div id="preview"></div>
         </div>
     </div>
 </body>
+
+<!-- icons -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none">
+
+    <symbol id="refresh" viewBox="0 -960 960 960">
+        <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+    </symbol>
+
+    <symbol id="function" viewBox="0 -960 960 960">
+        <path d="M240-160v-80l260-240-260-240v-80h480v120H431l215 200-215 200h289v120H240Z" />
+    </symbol>
+
+    <symbol id="hourglass" viewBox="0 -960 960 960">
+        <path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM160-80v-80h80v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-80v-80h640v80h-80v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h80v80H160Zm320-80Zm0-640Z" />
+    </symbol>
+
+    <symbol id="ruler" viewBox="0 -960 960 960">
+        <path d="M208-120q-37 0-62.5-25.5T120-208v-548q0-29 27-40.5t47 8.5l90 90-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 104 104-54 54 28 28 54-54 80 80q20 20 8.5 47T756-120H208Zm32-120h332L240-572v332Z" />
+    </symbol>
+
+    <symbol id="obj" viewBox="0 -960 960 960">
+        <path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z"/>
+    </symbol>
+</svg>
 
 <!-- count -->
 <script src="script/count.js"></script>

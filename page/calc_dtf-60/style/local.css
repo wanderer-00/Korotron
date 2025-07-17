@@ -2,14 +2,20 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: monospace;
+}
+
 .wrapper {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr 290px;
+    grid-template-columns: 1fr 580px;
 }
 
-.wrapper > div {
-    border: 1px solid red
+#input > div {
+    position: fixed;
+    display: grid;
+    grid-gap: 2rem;
 }
 
 #preview {
@@ -17,8 +23,35 @@
     flex-wrap: wrap;
     align-content: flex-start;
     grid-gap: 10px;
+    background-color: #DDD;
 }
 
 #preview > div {
-    border: 1px solid black
+    border: 1px solid gray;
+    background-color: #EEE
+}
+
+svg {
+    max-width: 32px;
+    max-height: 32px;
+    fill: gray;
+}
+
+
+#result {
+    display: grid;
+    grid-gap: 1rem 0.4rem;
+    font-size: 1.4rem;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+}
+
+#result > * {
+    /*    border: 1px solid red*/
+}
+
+@media (orientation: portrait) {
+    .wrapper {
+        grid-template-columns: 580px;
+    }
 }

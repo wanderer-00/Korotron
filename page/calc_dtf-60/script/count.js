@@ -2,6 +2,7 @@ var inputCount = document.getElementById('count');
 
 function plus() {
     inputCount.value = parseInt(inputCount.value) + 1;
+    calc();
 };
 
 function minus() {
@@ -10,4 +11,5 @@ function minus() {
     } else {
         inputCount.value -= 1
     }
+    calc();
 };
