@@ -1,0 +1,10 @@
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+@media (orientation: portrait) {
+    .wrapper {
+        width: 100%;
+    }
+}
