@@ -1,8 +1,8 @@
 // % приладок от общего тиража (1=100%)
 const spare = 0.1;
 
-// скорость печати принтера (mm/hour)
-const printSpeed = 3000;
+// скорость печати принтера (mm/minute)
+const printSpeed = 50;
 
 // множитель маштаба предпроссмотра
 const factor = 1;
@@ -26,10 +26,12 @@ function calc() {
     let valueWidth = width.value;
     let valueHeight = height.value;
     
+    let countPluseSpare = Math.ceil(valueCount) + Math.ceil(valueCount*0.1);
+    
     // построение preview
-    builder(valueCount, valueWidth, valueHeight);
+    builder(countPluseSpare, valueWidth, valueHeight);
     // построение log
-    log(valueCount, valueWidth, valueHeight);
+    log(countPluseSpare, valueWidth, valueHeight);
 };
 
 
@@ -59,10 +61,12 @@ function log (c, w, h){
     
     result.innerHTML = `
     <svg><use href="#obj"></use></svg>
-    <div>${c} шт.</div>
+    <div>${c} шт. (с учётом приладок (+10%))</div>
     <svg><use href="#hourglass"></use></svg>
     <div>${unitСonversion_time(preview.offsetHeight*factor / printSpeed)}</div>
-    `
+    `;
+    let printTime = document.getElementById('printTime');
+    printTime.innerHTML = unitСonversion_time(preview.offsetHeight*factor / printSpeed);
 };
 
 
@@ -79,20 +83,19 @@ function unitСonversion_length(length){
 
 
 // преобразование едениц min -> hour
+// ПРОИНСПЕКТИРОВАТЬ hour ЧЕРЕЗ alert
 function unitСonversion_time(time){
-    if( time < 1 ){
-        return `${Math.ceil(time*60)} minute`
+    if( time < 60 ){
+        return `${Math.ceil(time)} minute`
     } else {
-        return `${time} hour`
+        let hour = 0;
+        while ( time >= 60 ){
+            time = time - 60;
+            hour++;
+        };
+        return `${hour} hour ${Math.ceil(time % 60)} minute`;
     }
 }
-
-// 
-//function countAndSpare( count, spare ){
-//    if( count >=  ){
-//        return
-//    }
-//}
 
 
 count.addEventListener('input', function(event) {
