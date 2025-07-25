@@ -37,6 +37,7 @@ function calc() {
 
 // построение preview
 var preview = document.getElementById('preview');
+
 function builder(c, w, h){
     preview.innerHTML = '';
     for(i=0; i<c; i++) {
@@ -52,19 +53,38 @@ function builder(c, w, h){
 // расчёт логов
 function log (c, w, h){
     const result = document.getElementById('result');
-
-    console.log(`кол-во: ${c}`);
-    console.log(`размер: ${w}x${h} mm`);
-    console.log(`длина печати: ${unitСonversion_length(preview.offsetHeight*factor)}`);
-    console.log(`скорость принтера: ${printSpeed} mm/hour`);
-    console.log(`время печати: ${unitСonversion_time(preview.offsetHeight*factor / printSpeed)}`);
-    
     result.innerHTML = `
     <svg><use href="#obj"></use></svg>
     <div>${c} шт. (с учётом приладок (+10%))</div>
     <svg><use href="#hourglass"></use></svg>
     <div>${unitСonversion_time(preview.offsetHeight*factor / printSpeed)}</div>
     `;
+    
+    // таблица с подробной информацией
+    const additionalInformation = document.getElementById('additionalInformation');
+    additionalInformation.innerHTML = `
+    <tr>
+        <td>Кол-во (с приладками)</td>
+        <td>${c}</td>
+    </tr>
+    <tr>
+        <td>Размер</td>
+        <td>${w}x${h} mm</td>
+    </tr>
+    <tr>
+        <td>Длина печати</td>
+        <td>${unitСonversion_length(preview.offsetHeight*factor)}</td>
+    </tr>
+    <tr>
+        <td>Скорость печати</td>
+        <td>${printSpeed} mm/minute</td>
+    </tr>
+    <tr>
+        <td>Время печати</td>
+        <td>${unitСonversion_time(preview.offsetHeight*factor / printSpeed)}</td>
+    </tr>
+    `;
+    
     let printTime = document.getElementById('printTime');
     printTime.innerHTML = unitСonversion_time(preview.offsetHeight*factor / printSpeed);
 };
