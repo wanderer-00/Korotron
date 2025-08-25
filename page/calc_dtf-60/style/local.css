@@ -26,6 +26,9 @@ body {font-family: monospace}
     align-content: flex-start;
     grid-gap: 10px;
     background-color: #DDD;
+    height: 90vh;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 
 #preview > div {

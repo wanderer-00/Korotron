@@ -77,7 +77,7 @@ function log (c, w, h){
     </tr>
     <tr>
         <td>Скорость печати</td>
-        <td>${printSpeed} mm/minute</td>
+        <td>${printSpeed} mm/minute (замедлена в 3 раза от реальной)</td>
     </tr>
     <tr>
         <td>Время печати</td>
