@@ -16,8 +16,8 @@ const count = document.getElementById('count');
 const width = document.getElementById('width');
 const height = document.getElementById('height');
 
-
-
+// время создание макета (minute)
+const layoutTime = 4;
 
 // расчёт
 function calc() {
@@ -85,8 +85,26 @@ function log (c, w, h){
     </tr>
     `;
     
-    let printTime = document.getElementById('printTime');
-    printTime.innerHTML = unitСonversion_time(preview.offsetHeight*factor / printSpeed);
+    
+    // таблица расчёта времени
+    // время подготовки макета
+    let layoutTimeCell = document.getElementById('layoutTimeCell');
+    layoutTimeCell.innerHTML = `${layoutTime} minute`;
+    
+    // время печати принтера
+    let printTimeCell = document.getElementById('printTimeCell');
+    let printTime = Math.ceil(preview.offsetHeight*factor / printSpeed);
+    printTimeCell.innerHTML = unitСonversion_time(printTime);
+    
+    // время нарезки принтов
+    let cutTimeCell = document.getElementById('cutTimeCell');
+    let cutTime = Math.ceil(c/6);
+    cutTimeCell.innerHTML = `${cutTime} minute`;
+    
+    // сумма времени
+    let sumTimeCell = document.getElementById('sumTimeCell');
+    let sumTime = layoutTime + cutTime + printTime;
+    sumTimeCell.innerHTML = unitСonversion_time(sumTime);
 };
 
 

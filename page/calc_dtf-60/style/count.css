@@ -19,3 +19,11 @@ button.count {
     cursor: pointer;
     font-family: monospace;
 }
+
+button#buttonMinus {
+    color: darkred;
+}
+
+button#buttonPluse {
+    color: darkgreen;
+}

@@ -28,9 +28,9 @@
                 </div>
 
                 <div>
-                    <button class="count" onclick="minus()">-</button>
+                    <button id="buttonMinus" class="count" onclick="minus()">-</button>
                     <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1" oninput="validity.valid || (value='');">
-                    <button class="count" onclick="plus()">+</button>
+                    <button id="buttonPluse" class="count" onclick="plus()">+</button>
                 </div>
 
                 <div id="result"></div>
@@ -62,32 +62,26 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><svg>
-                                    <use href="#chip"></use>
-                                </svg></td>
+                            <td><svg><use href="#chip"></use></svg></td>
                             <td>Подготовка макета к печати</td>
-                            <td>4 minute</td>
+                            <td id="layoutTimeCell"></td>
                         </tr>
                         <tr>
-                            <td><svg>
-                                    <use href="#print"></use>
-                                </svg></td>
+                            <td><svg><use href="#print"></use></svg></td>
                             <td>Печать</td>
-                            <td id="printTime"></td>
+                            <td id="printTimeCell"></td>
                         </tr>
                         <tr>
-                            <td><svg>
-                                    <use href="#cut"></use>
-                                </svg></td>
+                            <td><svg><use href="#cut"></use></svg></td>
                             <td>Нарезка плёнки на отдельные принты</td>
-                            <td></td>
+                            <td id="cutTimeCell"></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td></td>
                             <td>Итог</td>
-                            <td></td>
+                            <td id="sumTimeCell"></td>
                         </tr>
                     </tfoot>
                 </table>
